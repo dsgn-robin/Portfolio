@@ -3,10 +3,15 @@ const HomePage = document.querySelector(".home-page");
 const PortfolioPage = document.querySelector(".portfolio-page");
 const Navbar = document.querySelector(".navbar");
 
+const RideauDroite = document.querySelector(".rideaudroite");
+const RideauGauche = document.querySelector(".rideaugauche");
+
 HomeButton.onclick = function () {
   HomePage.classList.toggle("open");
-  PortfolioPage.classList.toggle("open");
-  Navbar.classList.toggle("open");
+  // PortfolioPage.classList.toggle("open");
+  // Navbar.classList.toggle("open");
+  RideauDroite.classList.toggle("open");
+  RideauGauche.classList.toggle("open");
 };
 
 // ARROWS SYSTEM
@@ -19,23 +24,23 @@ const ContactPage = document.querySelector(".contact-page");
 const AboutPage = document.querySelector(".about-page");
 
 ArrowAbout.onclick = function () {
-  PortfolioPage.classList.remove("open");
-  AboutPage.classList.toggle("open");
+  PortfolioPage.style.transform = "translateX(-100%)";
+  AboutPage.style.transform = "translateX(0%)";
 };
 
 ArrowContact.onclick = function () {
-  PortfolioPage.classList.remove("open");
-  ContactPage.classList.toggle("open");
+  PortfolioPage.style.transform = "translateX(100%)";
+  ContactPage.style.transform = "translateX(0%)";
 };
 
 ArrowPortfolioC.onclick = function () {
-  PortfolioPage.classList.toggle("open");
-  ContactPage.classList.remove("open");
+  PortfolioPage.style.transform = "translateX(0%)";
+  ContactPage.style.transform = "translateX(-100%)";
 };
 
 ArrowPortfolioA.onclick = function () {
-  PortfolioPage.classList.toggle("open");
-  AboutPage.classList.remove("open");
+  PortfolioPage.style.transform = "translateX(0%)";
+  AboutPage.style.transform = "translateX(100%)";
 };
 
 // PAGE SYSTEM
@@ -113,27 +118,37 @@ document.addEventListener("DOMContentLoaded", () => {
 const boutonsUp = document.querySelectorAll(".ppcp-up");
 
 const cards = [
-  ".ppc-page-s",
-  ".ppc-page-d",
-  ".ppc-page-o",
-  ".ppc-page-m",
-  ".ppc-page-3",
-  ".ppc-page-p",
-  ".ppc-page-f",
-  ".ppc-page-pr",
+  ".ppcp-content-s",
+  ".ppcp-content-d",
+  ".ppcp-content-o",
+  ".ppcp-content-m",
+  ".ppcp-content-3",
+  ".ppcp-content-p",
+  ".ppcp-content-f",
+  ".ppcp-content-pr",
 ];
 
 boutonsUp.forEach((btn, index) => {
+  console.log("bouton " + index);
   btn.addEventListener("click", () => {
     const card = document.querySelector(cards[index]);
-    if (!card) return;
 
+    if (!card) {
+      console.info("pas de carte");
+      return;
+    }
+    console.info("carte " + index);
+    console.info("carte " + cards[index]);
     if (card.scrollHeight > card.clientHeight) {
+      console.info("je suis ici");
+
       card.scrollTo({
         top: 0,
         behavior: "smooth",
       });
     } else {
+      console.info("non la");
+
       const topPosition = card.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: topPosition,
@@ -259,7 +274,7 @@ document.querySelectorAll(".dot-p").forEach((dot) => {
 
 // ----- MAIL -----
 
-const textElementMail = document.querySelector("..cpc-ia-text-mail span");
+const textElementMail = document.querySelector(".cpc-ia-text-mail span");
 
 textElementMail.addEventListener("click", () => {
   const text = textElementMail.innerText;
