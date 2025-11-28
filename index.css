@@ -9,6 +9,11 @@
   src: url(./Fonts/Brittany/brittany_signature/BrittanySignatureScript.ttf);
 }
 
+@font-face {
+  font-family: "Nunito";
+  src: url(./Fonts/Nunito/static/Nunito-Black.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -117,6 +122,7 @@ header {
 .rideaudroite {
   transition: 0.5s;
   pointer-events: none;
+  transform: translateX(0%);
 }
 
 .rideaudroite.open {
@@ -126,6 +132,7 @@ header {
 .rideaugauche {
   transition: 0.5s;
   pointer-events: none;
+  transform: translateX(0%);
 }
 
 .rideaugauche.open {
@@ -275,6 +282,16 @@ header {
 .pp-direction-arrow .ppda-contact {
   left: 0;
   transform: rotate(180deg);
+}
+
+.pp-direction-arrow .ppdah-home {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 5%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: black;
 }
 
 /* ----- CARDS ----- */
@@ -453,7 +470,7 @@ header {
   color: rgb(25, 25, 25);
   font-size: 70%;
 
-  font-family: "Anton";
+  font-family: "Inter", sans-serif;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -685,6 +702,7 @@ body.lock-scroll {
 .ppcp-content-s {
   height: 310vh;
   /* overflow: hidden; */
+  font-family: "Nunito";
 }
 
 .ppcpc-s-1 {
@@ -854,6 +872,7 @@ body.lock-scroll {
   grid-template-areas:
     "ca t1"
     "t2 t2";
+  font-family: "Nunito";
 }
 
 .ppcpc-carousel-d-1 .carousel {
@@ -933,6 +952,7 @@ body.lock-scroll {
   margin: 13%;
   text-align: justify;
   text-justify: inter-word;
+  font-family: "Inter", sans-serif;
 }
 
 .ppcpc-text2-d-1 {
@@ -947,6 +967,7 @@ body.lock-scroll {
   margin: 8%;
   text-align: justify;
   text-justify: inter-word;
+  font-family: "Inter", sans-serif;
 }
 
 /* ----- C OBJECT ----- */
@@ -1644,7 +1665,7 @@ body.lock-scroll {
 
 [class*="cpc-ia-text-"] span {
   color: rgb(59, 59, 59);
-  font-family: "Anton";
+  font-family: "Nunito";
   font-size: 115%;
   transition: 0.3s;
   cursor: pointer;
@@ -1743,20 +1764,23 @@ body.lock-scroll {
   left: 20%;
   padding: 1.5% 2%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: #b3b2b2;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column;
+  justify-content: space-around; */
+  /* background-color: #b3b2b2; */
   border-radius: 50px;
   box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.5),
     inset 3px 3px 2px 0px rgba(255, 255, 255, 0.5);
+  background-image: url(./9-Aboutme/carte.png);
 }
 
 .apc-text1 img {
   height: 100%;
   width: 100%;
-  position: absolute;
-  bottom: 2%;
-  right: 6%;
+  position: relative;
+  /* bottom: 2%;
+  right: 6%; */
 }
 
 .apc-text1 span {

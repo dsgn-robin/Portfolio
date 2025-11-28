@@ -5,13 +5,22 @@ const Navbar = document.querySelector(".navbar");
 
 const RideauDroite = document.querySelector(".rideaudroite");
 const RideauGauche = document.querySelector(".rideaugauche");
+const ArrowHome = document.querySelector(".ppdah-home");
 
 HomeButton.onclick = function () {
   HomePage.classList.toggle("open");
-  // PortfolioPage.classList.toggle("open");
-  // Navbar.classList.toggle("open");
   RideauDroite.classList.toggle("open");
   RideauGauche.classList.toggle("open");
+  // setTimeout(() => {
+  //   HomePage.style.display = "none";
+  // }, 1000);
+};
+
+ArrowHome.onclick = function () {
+  // HomePage.style.opacity = "1";
+  HomePage.classList.remove("open");
+  RideauDroite.classList.remove("open");
+  RideauGauche.classList.remove("open");
 };
 
 // ARROWS SYSTEM
