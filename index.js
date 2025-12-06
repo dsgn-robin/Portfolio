@@ -7,17 +7,57 @@ const RideauDroite = document.querySelector(".rideaudroite");
 const RideauGauche = document.querySelector(".rideaugauche");
 const ArrowHome = document.querySelector(".ppdah-home");
 
-HomeButton.onclick = function () {
+// ---- Nouveau : cercle de chargement ----
+const ring = document.querySelector(".progress-ring");
+const radius = ring.r.baseVal.value;
+const circumference = 2 * Math.PI * radius;
+
+ring.style.strokeDasharray = `${circumference} ${circumference}`;
+ring.style.strokeDashoffset = circumference;
+
+let holdTimeout;
+let holding = false;
+
+// ---- Appui long sur le HomeButton ----
+HomeButton.addEventListener("mousedown", () => {
+  holding = true;
+  HomeButton.classList.add("holding");
+
+  // Animation : remplir le cercle (0 → 100%)
+  ring.style.transition = "stroke-dashoffset 1.2s linear";
+  ring.style.strokeDashoffset = 0;
+
+  // Après 2 sec, on déclenche TON ancienne action
+  holdTimeout = setTimeout(() => {
+    if (holding) {
+      triggerHomeButton(); // ← ta fonction
+    }
+  }, 1200);
+});
+
+HomeButton.addEventListener("mouseup", cancelHold);
+HomeButton.addEventListener("mouseleave", cancelHold);
+
+function cancelHold() {
+  holding = false;
+  HomeButton.classList.remove("holding");
+
+  clearTimeout(holdTimeout);
+
+  // Reset de l'animation du cercle
+  ring.style.transition = "stroke-dashoffset 0.2s";
+  ring.style.strokeDashoffset = circumference;
+}
+
+// ---- TON ancienne action (inchangée) ----
+function triggerHomeButton() {
   HomePage.classList.toggle("open");
   RideauDroite.classList.toggle("open");
   RideauGauche.classList.toggle("open");
-  // setTimeout(() => {
-  //   HomePage.style.display = "none";
-  // }, 1000);
-};
+}
 
+// ---- Bouton retour (inchangé) ----
 ArrowHome.onclick = function () {
-  // HomePage.style.opacity = "1";
   HomePage.classList.remove("open");
   RideauDroite.classList.remove("open");
   RideauGauche.classList.remove("open");

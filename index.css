@@ -105,7 +105,7 @@ header {
   width: 100vw;
   top: 0vh;
   position: absolute;
-  background-color: #eee9df;
+  background-color: transparent;
   transition: 0.7s;
   opacity: 1;
   display: flex;
@@ -119,98 +119,134 @@ header {
   pointer-events: none;
 }
 
-.rideaudroite {
+[class*="rideau"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50vw;
   transition: 0.5s;
   pointer-events: none;
   transform: translateX(0%);
+}
+
+.rideaudroite img {
+  width: 102%;
+  height: 105%;
+}
+
+.rideaugauche img {
+  height: 105%;
+  width: 102%;
 }
 
 .rideaudroite.open {
   transform: translateX(-100%);
 }
 
-.rideaugauche {
-  transition: 0.5s;
-  pointer-events: none;
-  transform: translateX(0%);
-}
-
 .rideaugauche.open {
   transform: translateX(100%);
 }
 
-.home-page .hp-image {
-  width: 25%;
-  height: 65%;
-  position: relative;
-  left: 19%;
-  top: 12%;
-  z-index: 5;
-}
-
-.home-page .hp-image .hpi-principal {
+.hp-rd-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  background-color: white;
-  border-radius: 19%;
-  z-index: 1;
+}
+
+.hp-image {
+  background-color: rgb(255, 255, 255);
+  width: 60%;
+  aspect-ratio: 12/16;
+  border-radius: 70px;
   display: flex;
   justify-content: center;
-  box-shadow: -4px 5px 8px 0px rgb(85, 84, 84);
+  align-items: end;
+  border: 8px solid white;
 }
 
-.home-page .hp-image .hpi-principal img {
-  width: 95%;
-  height: 98.5%;
+.hp-image img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 62px;
 }
 
-.home-page .hp-text {
-  width: 70%;
-  height: 70%;
+.hp-rg-content {
   position: absolute;
-  right: 10%;
-  top: 10%;
+  top: 0;
+  left: 0;
+  z-index: 100;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: flex-end;
-  z-index: 2;
-}
-.home-page .hp-text span:nth-child(1) {
-  z-index: 10;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.home-page .hp-text span:nth-child(2) {
-  z-index: 0;
+.hp-text {
+  width: 60%;
+  height: 15%;
+  border-radius: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid white;
+  background-color: rgb(255, 255, 255);
 }
 
-.home-page .hp-text span:nth-child(3) {
-  z-index: 0;
-}
-
-.home-page .hp-text span {
-  font-family: "Brittany";
-  font-size: 6rem;
-  color: #884224;
-}
-
-.home-page img {
-  height: 100vh;
+.hp-text span {
+  font-family: "Anton";
+  font-size: 3em;
+  line-height: 1.3;
+  margin-left: 3%;
 }
 
 .home-page .hp-button {
-  background-color: black;
+  background-color: rgb(192, 192, 192);
   border-radius: 50%;
   width: 8%;
   aspect-ratio: 1/1;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -50%);
+
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.home-page .hp-button.open {
-  background-color: white;
+/* Le SVG dépasse légèrement pour faire un cercle autour */
+.circle-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg); /* pour commencer en haut */
+  pointer-events: none;
+}
+
+/* Le cercle */
+.progress-ring {
+  fill: none;
+  stroke: white; /* couleur du cercle */
+  stroke-width: 6;
+  stroke-linecap: round; /* joli début */
+  stroke-dasharray: 0 1000; /* on anime ça */
+  transition: stroke-dasharray 2s linear;
+  opacity: 0; /* invisible tant que pas hold */
+}
+
+/* Quand on tient le bouton */
+.hp-button.holding .progress-ring {
+  opacity: 1;
 }
 
 /* ----- PORTFOLIO ----- */
@@ -286,12 +322,12 @@ header {
 
 .pp-direction-arrow .ppdah-home {
   position: absolute;
-  top: 0;
+  top: 2%;
   right: 50%;
   width: 5%;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  background-color: black;
+  aspect-ratio: 2/1;
+  background-color: rgb(213, 213, 213);
+  transform: translate(50%, 0%);
 }
 
 /* ----- CARDS ----- */
@@ -1137,7 +1173,7 @@ body.lock-scroll {
   border-radius: 30px;
   aspect-ratio: 9/13;
   box-shadow: -3px 3px 2px 0px rgba(0, 0, 0, 0.5);
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 [class*="ppcpc-text-p-1-"] span {
@@ -1359,6 +1395,7 @@ body.lock-scroll {
 .pp-direction-arrow .ppda-portfolio-c {
   right: 0;
   transform: rotate(0deg);
+  z-index: 100;
 }
 
 /* CONTENT */
@@ -1720,6 +1757,7 @@ body.lock-scroll {
 .pp-direction-arrow .ppda-portfolio-a {
   left: 0;
   transform: rotate(180deg);
+  z-index: 100;
 }
 
 /* CONTENT */
