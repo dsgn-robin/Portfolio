@@ -385,3 +385,19 @@ document.getElementById("send-btn").addEventListener("click", function (e) {
   // Ouvre le client mail
   window.location.href = mailtoLink;
 });
+
+// CONTENT ABOUT
+
+const discoverButtonAP = document.querySelector(".apct-discover");
+const backButtonAP = document.querySelector(".ap-back");
+const APcard = document.querySelector(".ap-card");
+
+discoverButtonAP.onclick = function () {
+  APcard.classList.add("open");
+  backButtonAP.classList.add("open");
+};
+
+backButtonAP.onclick = function () {
+  APcard.classList.remove("open");
+  backButtonAP.classList.remove("open");
+};
