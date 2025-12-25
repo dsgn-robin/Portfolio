@@ -391,13 +391,28 @@ document.getElementById("send-btn").addEventListener("click", function (e) {
 const discoverButtonAP = document.querySelector(".apct-discover");
 const backButtonAP = document.querySelector(".ap-back");
 const APcard = document.querySelector(".ap-card");
+const ReturnButtonAP = document.querySelector(".ap-card-return");
 
 discoverButtonAP.onclick = function () {
+  // document.body.style.overflow = "hidden";
+
+  APcard.style.overflowY = "auto";
+  // APcard.style.maxHeight = "100vh";
+
   APcard.classList.add("open");
   backButtonAP.classList.add("open");
 };
 
 backButtonAP.onclick = function () {
+  document.body.style.overflow = "";
+
+  APcard.classList.remove("open");
+  backButtonAP.classList.remove("open");
+};
+
+ReturnButtonAP.onclick = function () {
+  document.body.style.overflow = "";
+
   APcard.classList.remove("open");
   backButtonAP.classList.remove("open");
 };
