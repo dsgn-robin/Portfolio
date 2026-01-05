@@ -838,6 +838,11 @@ body.lock-scroll {
   margin-left: 100px;
 }
 
+.ppcpc-s-1-line-p,
+.ppcpc-s-1-line-r {
+  width: 78.5%;
+}
+
 [class*="ppcpc-s-1-content-"] span {
   text-align: justify;
   text-justify: inter-word;
@@ -865,6 +870,25 @@ body.lock-scroll {
   list-style-position: outside;
 }
 
+.ppcpc-s-1-content-p {
+  border: red solid 1px;
+  margin-left: 130px;
+  margin-top: 10px;
+  width: 73%;
+  height: 94%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "un"
+    "de"
+    "tr"
+    "qu";
+}
+
+[class*="ppcpc-s-1-c-"] {
+}
+
 .ppcpc-s-1-content-r {
   height: 95%;
   width: 100%;
@@ -878,6 +902,28 @@ body.lock-scroll {
   height: 80%;
   aspect-ratio: 16/9;
   border-radius: 20px;
+  position: absolute;
+}
+
+.ppcpc-s-1-content-r video:nth-child(1).open {
+  display: none;
+}
+
+.ppcpc-s-1-content-r video:nth-child(2) {
+  display: none;
+}
+
+.ppcpc-s-1-content-r video:nth-child(2).open {
+  display: block;
+}
+
+.ppcpc-s-1-c-btnst-r {
+  position: absolute;
+  width: 5%;
+  aspect-ratio: 1/1;
+  background-color: red;
+  right: 8%;
+  border-radius: 50%;
 }
 
 .ppcpc-s-1-content-u {

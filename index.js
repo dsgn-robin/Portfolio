@@ -207,6 +207,25 @@ boutonsUp.forEach((btn, index) => {
   });
 });
 
+// --------------- VIDÉO PROJET SCOLAIRE ---------------
+
+const BtnSTPS = document.querySelector(".ppcpc-s-1-c-btnst-r");
+const VideoPS = document.querySelector(
+  ".ppcpc-s-1-content-r video:nth-child(1)"
+);
+const VideoSTPS = document.querySelector(
+  ".ppcpc-s-1-content-r video:nth-child(2)"
+);
+
+BtnSTPS.onclick = function () {
+  VideoPS.classList.toggle("open");
+  VideoSTPS.classList.toggle("open");
+  VideoPS.muted = !VideoPS.muted;
+  VideoSTPS.muted = !VideoSTPS.muted;
+  VideoSTPS.currentTime = 0;
+  VideoPS.currentTime = 0;
+};
+
 // --------------- CAROUSEL DESSIN ---------------
 
 document.querySelectorAll(".carousel-stage").forEach((stage) => {
