@@ -169,7 +169,7 @@ const boutonsUp = document.querySelectorAll(".ppcp-up");
 const cards = [
   ".ppcp-content-s",
   ".ppcp-content-d",
-  ".ppcp-content-o",
+  ".ppcp-content-i",
   ".ppcp-content-m",
   ".ppcp-content-3",
   ".ppcp-content-p",
@@ -209,12 +209,12 @@ boutonsUp.forEach((btn, index) => {
 
 // --------------- VIDÉO PROJET SCOLAIRE ---------------
 
-const BtnSTPS = document.querySelector(".ppcpc-s-1-c-btnst-r");
+const BtnSTPS = document.querySelector(".ppcpc-r-c-btnst-s-1");
 const VideoPS = document.querySelector(
-  ".ppcpc-s-1-content-r video:nth-child(1)"
+  ".ppcpc-r-content-s-1 video:nth-child(1)"
 );
 const VideoSTPS = document.querySelector(
-  ".ppcpc-s-1-content-r video:nth-child(2)"
+  ".ppcpc-r-content-s-1 video:nth-child(2)"
 );
 
 BtnSTPS.onclick = function () {
