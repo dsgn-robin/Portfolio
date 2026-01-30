@@ -18,10 +18,14 @@ const VideoPS = document.querySelector(
 const VideoSTPS = document.querySelector(
   ".ppcpc-r-content-s-1 video:nth-child(2)",
 );
+const Icon1BtnSTPS = document.querySelector(".icon-s-subtitle-1");
+const Icon2BtnSTPS = document.querySelector(".icon-s-subtitle-2");
 
 BtnSTPS.onclick = function () {
   VideoPS.classList.toggle("open");
   VideoSTPS.classList.toggle("open");
+  Icon1BtnSTPS.classList.toggle("open");
+  Icon2BtnSTPS.classList.toggle("open");
   VideoPS.muted = !VideoPS.muted;
   VideoSTPS.muted = !VideoSTPS.muted;
   VideoSTPS.currentTime = 0;

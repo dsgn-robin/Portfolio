@@ -248,34 +248,98 @@ textElementTel.addEventListener("click", () => {
 
 // CONTACT SYSTEM
 
-document.getElementById("send-btn").addEventListener("click", function (e) {
-  e.preventDefault();
+// document.getElementById("send-btn").addEventListener("click", function (e) {
+//   e.preventDefault();
 
-  // Récupération des valeurs
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("mail").value.trim();
-  const message = document.getElementById("message").value.trim();
+//   // Récupération des valeurs
+//   const name = document.getElementById("name").value.trim();
+//   const email = document.getElementById("mail").value.trim();
+//   const message = document.getElementById("message").value.trim();
 
-  if (!name || !email || !message) {
-    alert("Merci de remplir tous les champs avant d’envoyer.");
-    return;
-  }
+//   if (!name || !email || !message) {
+//     alert("Merci de remplir tous les champs avant d’envoyer.");
+//     return;
+//   }
 
-  // Adresse où tu veux recevoir les messages
-  const destinataire = "robin.courte@mail.com"; // <-- remplace par ton adresse !
+//   // Adresse où tu veux recevoir les messages
+//   const destinataire = "robin.courte@mail.com"; // <-- remplace par ton adresse !
 
-  // Sujet et contenu du mail
-  const subject = `Message de ${name}`;
-  const body = `Nom / Entreprise : ${name}\nEmail : ${email}\n\nMessage :\n${message}`;
+//   // Sujet et contenu du mail
+//   const subject = `Message de ${name}`;
+//   const body = `Nom / Entreprise : ${name}\nEmail : ${email}\n\nMessage :\n${message}`;
 
-  // Création du lien mailto
-  const mailtoLink = `mailto:${destinataire}?subject=${encodeURIComponent(
-    subject,
-  )}&body=${encodeURIComponent(body)}`;
+//   // Création du lien mailto
+//   const mailtoLink = `mailto:${destinataire}?subject=${encodeURIComponent(
+//     subject,
+//   )}&body=${encodeURIComponent(body)}`;
 
-  // Ouvre le client mail
-  window.location.href = mailtoLink;
-});
+//   // Ouvre le client mail
+//   window.location.href = mailtoLink;
+// });
+
+document
+  .getElementById("send-btn")
+  .addEventListener("click", async function (e) {
+    e.preventDefault();
+
+    // 1. Récupération des éléments et des valeurs
+    const nameField = document.getElementById("name");
+    const emailField = document.getElementById("mail");
+    const messageField = document.getElementById("message");
+    const sendBtn = document.getElementById("send-btn");
+
+    const name = nameField.value.trim();
+    const email = emailField.value.trim();
+    const message = messageField.value.trim();
+
+    // 2. Vérification simple
+    if (!name || !email || !message) {
+      alert("Merci de remplir tous les champs avant d’envoyer.");
+      return;
+    }
+
+    // 3. Préparation des données pour Formspree
+    // Remplace 'TON_ID_FORMSPREE' par le code que Formspree t'a donné
+    const formspreeUrl = "https://formspree.io/f/xdazzzev";
+
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("message", message);
+
+    // Changement d'état du bouton
+    sendBtn.textContent = "Envoi...";
+    sendBtn.style.opacity = "0.5";
+    sendBtn.disabled = true;
+
+    try {
+      // 4. Envoi de la requête
+      const response = await fetch(formspreeUrl, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        alert("C'est envoyé ! Merci Robin te répondra bientôt.");
+        // On vide les champs
+        nameField.value = "";
+        emailField.value = "";
+        messageField.value = "";
+      } else {
+        alert("Oups ! Un problème est survenu. Vérifie ton email.");
+      }
+    } catch (error) {
+      alert("Erreur de connexion. Vérifie ton réseau.");
+    } finally {
+      // 5. Remise à zéro du bouton
+      sendBtn.textContent = "Envoyer";
+      sendBtn.style.opacity = "1";
+      sendBtn.disabled = false;
+    }
+  });
 
 // CONTENT ABOUT
 

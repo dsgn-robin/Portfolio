@@ -6,13 +6,12 @@ refaire avec ca par exemple : Robin — Étudiant en design & ingénierie passio
 
 Partie maquette : ajouter la maquette de Liffré/ Paris de la 4ème
 
-Partie Projet Scolaire : mettre des sous-titres à la vidéo
-
 Partie Portfolio :
 -mettre la couleur dans les petits cubes
--faire le bouton de retour home page
 
-Général : tout les alt des images
+Général :
+-tout les alt des images
+-réduire la qualité des images
 
 MODIFIER IMAGES ----------------------------------------------------
 
@@ -23,4 +22,9 @@ CORRIGER BUGS ------------------------------------------------------
 
 Partie About : corriger le remonter dans la page
 
-Partie Projet Scolaire : bande beige en bas qui reste fixe
+Les Images quand le site est en ligne :
+-vidéo principale du projet scolaire
+-identité visuelle image principale
+-3 images de photographie
+
+Général : corriger les ombres des cards quand elles tournent
