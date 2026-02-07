@@ -282,7 +282,6 @@ document
   .addEventListener("click", async function (e) {
     e.preventDefault();
 
-    // 1. Récupération des éléments et des valeurs
     const nameField = document.getElementById("name");
     const emailField = document.getElementById("mail");
     const messageField = document.getElementById("message");
@@ -292,14 +291,11 @@ document
     const email = emailField.value.trim();
     const message = messageField.value.trim();
 
-    // 2. Vérification simple
     if (!name || !email || !message) {
       alert("Merci de remplir tous les champs avant d’envoyer.");
       return;
     }
 
-    // 3. Préparation des données pour Formspree
-    // Remplace 'TON_ID_FORMSPREE' par le code que Formspree t'a donné
     const formspreeUrl = "https://formspree.io/f/xdazzzev";
 
     const formData = new FormData();
@@ -307,13 +303,11 @@ document
     formData.append("email", email);
     formData.append("message", message);
 
-    // Changement d'état du bouton
     sendBtn.textContent = "Envoi...";
     sendBtn.style.opacity = "0.5";
     sendBtn.disabled = true;
 
     try {
-      // 4. Envoi de la requête
       const response = await fetch(formspreeUrl, {
         method: "POST",
         body: formData,
@@ -324,7 +318,6 @@ document
 
       if (response.ok) {
         alert("C'est envoyé ! Merci Robin te répondra bientôt.");
-        // On vide les champs
         nameField.value = "";
         emailField.value = "";
         messageField.value = "";
@@ -334,7 +327,6 @@ document
     } catch (error) {
       alert("Erreur de connexion. Vérifie ton réseau.");
     } finally {
-      // 5. Remise à zéro du bouton
       sendBtn.textContent = "Envoyer";
       sendBtn.style.opacity = "1";
       sendBtn.disabled = false;
@@ -343,36 +335,34 @@ document
 
 // CONTENT ABOUT
 
-const discoverButtonAP = document.querySelector(".apct-discover");
-const backButtonAP = document.querySelector(".ap-back");
-const APcard = document.querySelector(".ap-card");
-const ReturnButtonAP = document.querySelector(".ap-card-return");
+// const discoverButtonAP = document.querySelector(".apct-discover");
+// const backButtonAP = document.querySelector(".ap-back");
+// const APcard = document.querySelector(".ap-card");
+// const ReturnButtonAP = document.querySelector(".ap-card-return");
 
-discoverButtonAP.onclick = function () {
-  // document.body.style.overflow = "hidden";
+// discoverButtonAP.onclick = function () {
 
-  APcard.style.overflowY = "auto";
-  // APcard.style.maxHeight = "100vh";
+//   APcard.style.overflowY = "auto";
 
-  APcard.classList.add("open");
-  backButtonAP.classList.add("open");
-};
+//   APcard.classList.add("open");
+//   backButtonAP.classList.add("open");
+// };
 
-backButtonAP.onclick = function () {
-  document.body.style.overflow = "";
+// backButtonAP.onclick = function () {
+//   document.body.style.overflow = "";
 
-  APcard.classList.remove("open");
-  backButtonAP.classList.remove("open");
-};
+//   APcard.classList.remove("open");
+//   backButtonAP.classList.remove("open");
+// };
 
-ReturnButtonAP.onclick = function () {
-  document.body.style.overflow = "";
+// ReturnButtonAP.onclick = function () {
+//   document.body.style.overflow = "";
 
-  APcard.classList.remove("open");
-  backButtonAP.classList.remove("open");
-};
+//   APcard.classList.remove("open");
+//   backButtonAP.classList.remove("open");
+// };
 
-console.log("Le script est arrivé au bout");
+// console.log("Le script est arrivé au bout");
 
 // CAROUSEL DOMAINES
 

@@ -663,7 +663,8 @@ header {
 .ppc-page-3,
 .ppc-page-m,
 .ppc-page-ep,
-.ppc-page-ml {
+.ppc-page-ml,
+.ppc-page-am {
   display: flex;
   justify-content: center;
 }
@@ -814,8 +815,6 @@ body.lock-scroll {
 }
 [class*="ppcpc-processus-"] {
   grid-area: po;
-  padding: 0;
-  margin: 0;
 }
 [class*="ppcpc-resultat-"] {
   grid-area: re;
@@ -841,7 +840,7 @@ body.lock-scroll {
 [class*="ppcpc-p-title-"],
 [class*="ppcpc-r-title-"],
 [class*="ppcpc-a-title-"] {
-  margin-left: 100px;
+  margin-left: 8vw;
 }
 
 [class*="ppcpc-c-title-"] span,
@@ -852,7 +851,7 @@ body.lock-scroll {
 [class*="ppcpc-u-title-"] span {
   font-family: "Anton";
   color: rgb(59, 59, 59);
-  font-size: 1.7rem;
+  font-size: 1.7em;
 }
 
 [class*="ppcpc-c-line-"],
@@ -871,7 +870,7 @@ body.lock-scroll {
 [class*="ppcpc-p-line-"],
 [class*="ppcpc-r-line-"],
 [class*="ppcpc-a-line-"] {
-  margin-left: 100px;
+  margin-left: 8vw;
 }
 
 [class*="ppcpc-p-line-"],
@@ -893,15 +892,15 @@ body.lock-scroll {
 
 [class*="ppcpc-c-content-"],
 [class*="ppcpc-a-content-"] {
-  margin-left: 130px;
-  margin-top: 10px;
+  margin-left: 10vw;
+  margin-top: 1vh;
   width: 70%;
 }
 
 [class*="ppcpc-o-content-"],
 [class*="ppcpc-u-content-"] {
-  margin-left: 30px;
-  margin-top: 10px;
+  margin-left: 2vw;
+  margin-top: 1vh;
   width: 70%;
 }
 
@@ -1122,7 +1121,6 @@ body.lock-scroll {
 /* CONTENT */
 
 .ppcpc-s-1 {
-  /* border: 1px red solid; */
   position: relative;
   width: 100%;
   height: 410vh;
@@ -2698,12 +2696,18 @@ body.lock-scroll {
   justify-content: center;
   align-items: center;
   display: flex;
+  background-color: rgb(59, 59, 59);
+  width: 37%;
+  border-radius: 50px;
+  box-shadow:
+    -3px 3px 2px 0px rgba(0, 0, 0, 0.5),
+    inset -3px 3px 2px 0px rgba(255, 255, 255, 0.5);
 }
 
 .about-page .ap-content .apc-title span {
   width: 100%;
   height: 100%;
-  color: rgb(59, 59, 59);
+  color: #f3ece2;
   font-family: "Anton";
   text-align: center;
   display: block;
@@ -2801,11 +2805,11 @@ body.lock-scroll {
     inset -3px 3px 2px 0px rgba(255, 255, 255, 0.5);
 }
 
-.about-page .apct-discover:hover h1 {
+.about-page .apct-discover:hover span {
   color: black;
 }
 
-.about-page .apct-discover h1 {
+.about-page .apct-discover span {
   color: rgb(59, 59, 59);
   font-family: "Anton";
   font-size: 0.8rem;
@@ -3144,5 +3148,103 @@ footer span {
       "c3 c4"
       "c5 c5"
       "c5 c5";
+  }
+}
+
+/* Iphone 16  */
+
+@media screen and (max-width: 400px) {
+  .portfolio-page .pp-cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30% 30% 20% 20%;
+    grid-template-areas:
+      "c1 c2"
+      "c3 c4"
+      "c5 c5"
+      "c5 c5";
+  }
+  .ppcpc-domaine-carousel .carousel {
+    height: 20%;
+    top: -10%;
+    width: 40%;
+  }
+  .portfolio-page .pp-cards li [class^="ppc-frame-"] [class^="ppcf-inner-"] {
+    height: 100%;
+  }
+  .portfolio-page .pp-cards [class*="ppcf-f-dots-"] {
+    display: none;
+  }
+
+  /* HEADER */
+
+  [class*="ppcp-return-"] {
+    height: 60%;
+    margin-right: 5%;
+  }
+
+  [class*="ppcp-header-"] {
+    height: 10vh;
+  }
+
+  /* TITLES */
+
+  [class*="ppcpc-title-"] {
+    margin-left: 7%;
+  }
+
+  [class*="ppcpc-title-"] h1 {
+    font-size: 2rem;
+  }
+
+  [class*="ppcp-footer-"] {
+    height: 6vh;
+  }
+
+  /* TEMPLATE PROJET */
+
+  [class*="ppcpc-o-title-"],
+  [class*="ppcpc-u-title-"] {
+    margin-left: 8vw;
+  }
+
+  [class*="ppcpc-c-line-"],
+  [class*="ppcpc-o-line-"],
+  [class*="ppcpc-a-line-"],
+  [class*="ppcpc-u-line-"] {
+    margin-left: 8vw;
+    width: 78.5%;
+    height: 2px;
+  }
+
+  [class*="ppcpc-o-content-"],
+  [class*="ppcpc-u-content-"],
+  [class*="ppcpc-c-content-"],
+  [class*="ppcpc-a-content-"] {
+    margin-left: 13vw;
+    margin-top: 3vh;
+  }
+
+  [class*="ppcpc-p-content-"] {
+    gap: -200%;
+  }
+
+  .ppcp-footer-s {
+    bottom: -8%;
+  }
+
+  /* SP */
+
+  .ppcpc-s-1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 9% 9% 50% 14% 9% 9%;
+    gap: 1%;
+    height: 260vh;
+    grid-template-areas:
+      "co"
+      "ob"
+      "po"
+      "re"
+      "ap"
+      "ou";
   }
 }
