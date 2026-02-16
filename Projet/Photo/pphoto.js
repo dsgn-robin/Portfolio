@@ -1,5 +1,5 @@
 const boutonUp = document.querySelector(".ppcp-up");
-const card = document.querySelector(".ppcp-content-am");
+const card = document.querySelector(".ppcp-content-pp");
 
 if (boutonUp && card) {
   boutonUp.addEventListener("click", () => {
