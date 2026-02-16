@@ -954,6 +954,10 @@ body.lock-scroll {
     "qu";
 }
 
+.ppcpc-p-content-i-1 {
+  grid-template-rows: 1fr 1fr;
+}
+
 [class*="ppcpc-p-c-"] {
   position: relative;
   display: grid;
@@ -2961,6 +2965,7 @@ body.lock-scroll {
   position: absolute;
   bottom: 2%;
   right: 6%;
+  pointer-events: none;
 }
 
 .apc-text1 {
@@ -3307,7 +3312,7 @@ footer span {
     font-size: 0.8em;
   }
 
-  .ppcp-footer-s {
+  [class*="ppcp-footer"] {
     bottom: -10%;
   }
 
@@ -3329,9 +3334,9 @@ footer span {
 
   .ppcpc-i-1 {
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 10% 48% 14% 9% 9%;
+    grid-template-rows: 9% 9% 42% 16% 12% 12%;
     gap: 1%;
-    height: 260vh;
+    height: 195vh;
     grid-template-areas:
       "co"
       "ob"
@@ -3353,5 +3358,10 @@ footer span {
       "re"
       "ap"
       "ou";
+  }
+
+  .about-page .ap-content img {
+    height: 80%;
+    right: -20%;
   }
 }
