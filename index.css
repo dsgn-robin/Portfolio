@@ -3303,7 +3303,7 @@ footer span {
 
   .ppcpc-s-1 {
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 10% 48% 14% 9% 9%;
+    /* grid-template-rows: 10% 10% 48% 14% 9% 9%; */
     gap: 1%;
     height: 260vh;
     grid-template-areas:
@@ -3317,7 +3317,7 @@ footer span {
 
   .ppcpc-i-1 {
     grid-template-columns: 1fr;
-    grid-template-rows: 9% 9% 42% 16% 12% 12%;
+    /* grid-template-rows: 9% 9% 42% 16% 12% 12%; */
     gap: 1%;
     height: 195vh;
     grid-template-areas:
@@ -3331,7 +3331,7 @@ footer span {
 
   .ppcpc-ep-1 {
     grid-template-columns: 1fr;
-    grid-template-rows: 11% 10% 47% 14% 9% 9%;
+    /* grid-template-rows: 11% 10% 47% 14% 9% 9%; */
     gap: 1%;
     height: 260vh;
     grid-template-areas:
