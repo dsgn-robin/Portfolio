@@ -820,6 +820,26 @@ body.lock-scroll {
 
 /* TEMPLATE PROJET */
 
+.ppcpc-s-1,
+.ppcpc-i-1,
+.ppcpc-ep-1 {
+  position: relative;
+  width: 100%;
+
+  margin-top: 2vh;
+  display: grid;
+  gap: 2vh;
+  grid-template-columns: 50% 50%;
+  /* grid-template-rows: 6% 33% 33% 22% 6%; */
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "co ob"
+    "po po"
+    "re re"
+    "ap ou";
+  margin-bottom: 5vh;
+}
+
 [class*="ppcpc-context-"],
 [class*="ppcpc-objectif-"],
 [class*="ppcpc-processus-"],
@@ -829,6 +849,8 @@ body.lock-scroll {
   display: flex;
   justify-content: start;
   flex-direction: column;
+  /* top: 0;
+  position: relative; */
 }
 
 [class*="ppcpc-context-"] {
@@ -875,7 +897,7 @@ body.lock-scroll {
 [class*="ppcpc-u-title-"] span {
   font-family: "Anton";
   color: rgb(59, 59, 59);
-  font-size: 1.7em;
+  font-size: 150%;
 }
 
 [class*="ppcpc-c-line-"],
@@ -954,10 +976,6 @@ body.lock-scroll {
     "qu";
 }
 
-.ppcpc-p-content-i-1 {
-  grid-template-rows: 1fr 1fr;
-}
-
 [class*="ppcpc-p-c-"] {
   position: relative;
   display: grid;
@@ -1019,6 +1037,7 @@ body.lock-scroll {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 5%;
 }
 
 [class*="ppcpc-u-content-"] {
@@ -1151,19 +1170,7 @@ body.lock-scroll {
 /* CONTENT */
 
 .ppcpc-s-1 {
-  position: relative;
-  width: 100%;
-  height: 410vh;
-  margin-top: 5%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 6% 33% 33% 22% 6%;
-  grid-template-areas:
-    "co ob"
-    "po po"
-    "po po"
-    "re re"
-    "ap ou";
+  height: 415vh;
 }
 
 /* PROCESSUS */
@@ -1199,10 +1206,9 @@ body.lock-scroll {
 /* RESULTAT */
 
 .ppcpc-r-content-s-1 video {
-  height: 80%;
+  width: 80%;
   aspect-ratio: 16/9;
   border-radius: 20px;
-  position: absolute;
 }
 
 /* ----- DRAW ----- */
@@ -1357,23 +1363,14 @@ body.lock-scroll {
 /* CONTENT */
 
 .ppcpc-i-1 {
-  /* border: 1px red solid; */
-  position: relative;
-  width: 100%;
-  height: 270vh;
-  margin-top: 5%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 9% 28% 28% 26% 9%;
-  grid-template-areas:
-    "co ob"
-    "po po"
-    "po po"
-    "re re"
-    "ap ou";
+  height: 300vh;
 }
 
 /* PROCESSUS */
+
+.ppcpc-p-content-i-1 {
+  grid-template-rows: 1fr 1fr;
+}
 
 /* 1 */
 
@@ -1395,10 +1392,9 @@ body.lock-scroll {
 /* RESULTAT */
 
 .ppcpc-r-content-i-1 img {
-  height: 80%;
+  width: 80%;
   aspect-ratio: auto;
   border-radius: 20px;
-  position: absolute;
 }
 
 /* ----- ESSENTIAL PHONE ----- */
@@ -1408,20 +1404,7 @@ body.lock-scroll {
 }
 
 .ppcpc-ep-1 {
-  /* border: 1px red solid; */
-  position: relative;
-  width: 100%;
   height: 270vh;
-  margin-top: 5%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 9% 28% 28% 26% 9%;
-  grid-template-areas:
-    "co ob"
-    "po po"
-    "po po"
-    "re re"
-    "ap ou";
 }
 
 /* PROCESSUS */
