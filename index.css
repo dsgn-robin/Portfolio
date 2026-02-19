@@ -697,6 +697,7 @@ header {
   width: 100%;
   scroll-behavior: smooth;
   overflow-y: auto;
+  overflow-x: hidden;
   z-index: 20;
   font-family: "Inter", sans-serif;
   /* min-height: 100%; */
@@ -825,10 +826,10 @@ body.lock-scroll {
 .ppcpc-ep-1 {
   position: relative;
   width: 100%;
-
+  overflow: hidden;
   margin-top: 2vh;
   display: grid;
-  gap: 2vh;
+  /* gap: 2%; */
   grid-template-columns: 50% 50%;
   /* grid-template-rows: 6% 33% 33% 22% 6%; */
   grid-template-rows: 1fr 1fr 1fr 1fr;
