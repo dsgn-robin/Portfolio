@@ -3138,6 +3138,7 @@ footer span {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   font-family: "Nunito";
   gap: 3px;
+  justify-items: center;
 }
 
 .ppcpc-part-1-ml,
@@ -3147,8 +3148,10 @@ footer span {
 .ppcpc-part-5-ml,
 .ppcpc-part-6-ml {
   display: flex;
-  justify-content: start;
+  /* justify-content: center; */
   flex-direction: column;
+  align-items: center;
+  width: 80%;
 }
 
 .ppcpc-part-1-title-ml,
@@ -3159,7 +3162,7 @@ footer span {
 .ppcpc-part-6-title-ml {
   height: auto;
   width: 100%;
-  margin-left: 100px;
+  /* margin-left: 100px; */
 }
 
 .ppcpc-part-1-title-ml span,
@@ -3179,11 +3182,11 @@ footer span {
 .ppcpc-part-4-line-ml,
 .ppcpc-part-5-line-ml,
 .ppcpc-part-6-line-ml {
-  width: 75%;
+  width: 100%;
   height: 2px;
   background-color: black;
   border-radius: 2px;
-  margin-left: 100px;
+  /* margin-left: 100px; */
 }
 
 .ppcpc-part-1-content-ml,
@@ -3192,10 +3195,10 @@ footer span {
 .ppcpc-part-4-content-ml,
 .ppcpc-part-5-content-ml,
 .ppcpc-part-6-content-ml {
-  margin-left: 130px;
+  /* margin-left: 130px; */
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 70%;
+  width: 90%;
 }
 
 .ppcpc-part-1-content-ml span,
