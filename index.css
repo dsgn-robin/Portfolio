@@ -825,14 +825,14 @@ body.lock-scroll {
 [class*="ppcpc-c-content-"],
 [class*="ppcpc-a-content-"] {
   margin-left: 10vw;
-  /* margin-top: 1vh; */
+  margin-top: 1vh;
   width: 70%;
 }
 
 [class*="ppcpc-o-content-"],
 [class*="ppcpc-u-content-"] {
   margin-left: 2vw;
-  /* margin-top: 1vh; */
+  margin-top: 1vh;
   width: 70%;
 }
 
@@ -947,9 +947,11 @@ body.lock-scroll {
     inset -3px 3px 2px 0px rgba(255, 255, 255, 0.5);
 }
 
-[class*="ppcpc-u-icon-"] img {
+[class*="ppcpc-u-icon-"] img,
+[class*="ppcpc-u-icon-"] svg {
   width: 60%;
   height: auto;
+  border-radius: 10px;
 }
 
 [class*="ppcpc-u-text-"] {
@@ -993,18 +995,18 @@ body.lock-scroll {
 
 /* Milanote */
 .ppcpc-u-icon-1-i-1 img {
-  width: 80%;
+  width: 70%;
 }
 /* Figma */
 .ppcpc-u-icon-2-i-1 img,
 .ppcpc-u-icon-3-ep-1 img {
-  width: 43%;
+  width: 63%;
 }
 /* Canva */
 .ppcpc-u-icon-3-i-1 img,
 .ppcpc-u-icon-3-s-1 img,
 .ppcpc-u-icon-2-ep-1 img {
-  width: 95%;
+  width: 55%;
 }
 
 .ppcp-footer-s,
@@ -1288,6 +1290,7 @@ body.lock-scroll {
 
 .ppcpc-p-1-img-i-1 img:nth-child(2) {
   aspect-ratio: 1/1;
+  width: 22%;
 }
 
 /* 2 */
@@ -1330,16 +1333,21 @@ body.lock-scroll {
 
 .ppcpc-p-1-img-ep-1 img:nth-child(2),
 .ppcpc-p-1-img-ep-1 img:nth-child(3) {
-  width: 32%;
-  aspect-ratio: 16/9;
+  width: 40%;
+  aspect-ratio: 13/9;
 }
 
 /* 2 */
 
-.ppcpc-p-2-img-ep-1 img {
+.ppcpc-p-2-img-ep-1 img:nth-child(1) {
   height: 60%;
   aspect-ratio: auto;
   border-radius: 0;
+}
+
+.ppcpc-p-2-img-ep-1 img:nth-child(2) {
+  width: 40%;
+  aspect-ratio: 13/9;
 }
 
 /* 3 */
@@ -2967,12 +2975,12 @@ footer span {
 @media screen and (max-width: 500px) {
   .portfolio-page .pp-cards {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
       "c1 c2"
       "c3 c4"
-      "c5 c5"
-      "c5 c5";
+      "c5 c6"
+      "c7 c8";
   }
 }
 
@@ -2981,12 +2989,12 @@ footer span {
 @media screen and (max-width: 400px) {
   .portfolio-page .pp-cards {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 30% 30% 20% 20%;
+    grid-template-rows: auto;
     grid-template-areas:
       "c1 c2"
       "c3 c4"
-      "c5 c5"
-      "c5 c5";
+      "c5 c6"
+      "c7 c8";
   }
   .ppcpc-domaine-carousel .carousel {
     height: 100%;
