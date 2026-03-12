@@ -121,3 +121,11 @@ document.querySelectorAll(".carousel-stage").forEach((stage) => {
     if (e.key === "ArrowLeft") goPrev();
   });
 });
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowTop") {
+    card.scrollBy(0, 150);
+  } else if (event.key === "ArrowBottom") {
+    card.scrollBy(0, 150);
+  }
+});

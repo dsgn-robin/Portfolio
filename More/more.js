@@ -33,3 +33,19 @@ document.addEventListener("DOMContentLoaded", () => {
     revealOnScroll.observe(el);
   });
 });
+
+var acc = document.getElementsByClassName("ppc-mo-accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+
+    var zone = this.nextElementSibling;
+    if (zone.style.maxHeight) {
+      zone.style.maxHeight = null;
+    } else {
+      zone.style.maxHeight = zone.scrollHeight + "px";
+    }
+  });
+}
