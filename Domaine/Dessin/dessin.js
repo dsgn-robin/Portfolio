@@ -129,3 +129,35 @@ window.addEventListener("keydown", (event) => {
     card.scrollBy(0, 150);
   }
 });
+
+// FULL SCREEN IMG
+
+document.addEventListener("click", function (event) {
+  const cible = event.target;
+
+  if (
+    cible.classList.contains("reveal") &&
+    cible.classList.contains("active")
+  ) {
+    togglePleinEcran(cible);
+  }
+});
+
+function togglePleinEcran(element) {
+  const isFullScreen =
+    document.fullscreenElement || document.webkitFullscreenElement;
+
+  if (!isFullScreen) {
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}

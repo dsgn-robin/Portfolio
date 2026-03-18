@@ -11,24 +11,6 @@ if (boutonUp && card) {
 } else {
 }
 
-// document.querySelectorAll(".dot-p").forEach((dot) => {
-//   dot.addEventListener("click", () => {
-//     const img = dot
-//       .closest("div[class^='ppcpc-image-p-1-']")
-//       .querySelector("img");
-
-//     if (img) {
-//       if (img.requestFullscreen) {
-//         img.requestFullscreen();
-//       } else if (img.webkitRequestFullscreen) {
-//         img.webkitRequestFullscreen();
-//       } else if (img.msRequestFullscreen) {
-//         img.msRequestFullscreen();
-//       }
-//     }
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
   const revealElements = document.querySelectorAll(".reveal");
 
@@ -109,3 +91,35 @@ window.addEventListener("keydown", (event) => {
     card.scrollBy(0, 150);
   }
 });
+
+// FULL SCREEN IMG
+
+document.addEventListener("click", function (event) {
+  const cible = event.target;
+
+  if (
+    cible.classList.contains("reveal") &&
+    cible.classList.contains("active")
+  ) {
+    togglePleinEcran(cible);
+  }
+});
+
+function togglePleinEcran(element) {
+  const isFullScreen =
+    document.fullscreenElement || document.webkitFullscreenElement;
+
+  if (!isFullScreen) {
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}
