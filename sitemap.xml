@@ -1,77 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
+  <url>
+    <loc>https://robincourte.com/index.html</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://robincourte.com/More/more.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://robincourte.com/9-Aboutme/aboutme.html</loc>
+    <priority>0.70</priority>
+  </url>
 
-<url>
-  <loc>https://robincourte.com/</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://robincourte.com/Projet/Drone/drone.html</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://robincourte.com/Projet/Identit%C3%A9/identit%C3%A9.html</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://robincourte.com/Projet/Essentialphone/Essentialphone.html</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://robincourte.com/Projet/Photo/pphoto.html</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://robincourte.com/Domaine/Dessin/dessin.html</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://robincourte.com/Domaine/Programmation/programmation.html</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://robincourte.com/Domaine/Maquette/maquette.html</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://robincourte.com/Domaine/Conception%203D/conception3d.html</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://robincourte.com/Domaine/Photographie/photographie.html</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://robincourte.com/9-Aboutme/aboutme.html</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://robincourte.com/Mentions_legales/mention.html</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://robincourte.com/index.html</loc>
-  <lastmod>2026-02-16T20:40:05+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
+  <url>
+    <loc>https://robincourte.com/Projet/Drone/drone.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://robincourte.com/Projet/Drone/thumbnail.jpg</video:thumbnail_loc>
+      <video:title>Projet Scolaire Drone</video:title>
+      <video:description>Démonstration vidéo du projet de conception de drone.</video:description>
+      <video:content_loc>https://robincourte.com/1-Projet_Scolaire/Video_drone_seul.mp4</video:content_loc>
+    </video:video>
+    <priority>0.80</priority>
+  </url>
 
+  <url><loc>https://robincourte.com/Projet/Identit%C3%A9/identit%C3%A9.html</loc><priority>0.70</priority></url>
+  <url><loc>https://robincourte.com/Projet/Essentialphone/Essentialphone.html</loc><priority>0.70</priority></url>
+  <url><loc>https://robincourte.com/Projet/Photo/pphoto.html</loc><priority>0.70</priority></url>
+  <url><loc>https://robincourte.com/Projet/Premier_portfolio/prem_portfolio.html</loc><priority>0.70</priority></url>
+
+  <url><loc>https://robincourte.com/Domaine/Dessin/dessin.html</loc><priority>0.60</priority></url>
+  <url><loc>https://robincourte.com/Domaine/Conception%203D/conception3d.html</loc><priority>0.60</priority></url>
+  <url><loc>https://robincourte.com/Domaine/Maquette/maquette.html</loc><priority>0.60</priority></url>
+  <url><loc>https://robincourte.com/Domaine/Programmation/programmation.html</loc><priority>0.60</priority></url>
+  <url><loc>https://robincourte.com/Domaine/Photographie/photographie.html</loc><priority>0.60</priority></url>
+
+  <url><loc>https://robincourte.com/Mentions_legales/mention.html</loc><priority>0.30</priority></url>
 
 </urlset>
