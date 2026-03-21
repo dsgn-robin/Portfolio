@@ -1794,12 +1794,12 @@ li [class*="ppcf-f-text-"] span:nth-child(2) {
 .ppcpc-part-3-p-1,
 .ppcpc-part-4-p-1 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(3, 30%);
+  grid-auto-rows: minmax(auto, auto);
   gap: 20px;
-  padding: 20px;
-  width: 100%;
+  width: 88%;
   height: auto;
+  margin-top: 5%;
 }
 
 [class*="ppcpc-p2-image-"] img,
@@ -2937,6 +2937,42 @@ footer span {
   .portfolio-page .pp-cards {
     height: 70%;
   }
+  /* ----- PHOTOGRAPHIE ----- */
+  .ppcpc-p2-text-1-p-1 span:nth-child(1),
+  .ppcpc-p2-text-2-p-1 span:nth-child(1),
+  .ppcpc-p2-text-3-p-1 span:nth-child(1),
+  .ppcpc-p3-text-1-p-1 span:nth-child(1),
+  .ppcpc-p3-text-2-p-1 span:nth-child(1),
+  .ppcpc-p3-text-3-p-1 span:nth-child(1),
+  .ppcpc-p4-text-1-p-1 span:nth-child(1),
+  .ppcpc-p4-text-2-p-1 span:nth-child(1),
+  .ppcpc-p4-text-3-p-1 span:nth-child(1) {
+    font-size: 10em;
+  }
+  .ppcpc-p2-text-1-p-1 span:nth-child(2) {
+    font-size: 4.3em;
+  }
+  .ppcpc-p2-text-3-p-1 span:nth-child(2) {
+    font-size: 3.2em;
+  }
+  .ppcpc-p2-text-2-p-1 span:nth-child(2) {
+    font-size: 3.8em;
+  }
+  .ppcpc-p3-text-1-p-1 span:nth-child(2) {
+    font-size: 4.1em;
+  }
+  .ppcpc-p3-text-2-p-1 span:nth-child(2) {
+    font-size: 2.8em;
+  }
+  .ppcpc-p4-text-2-p-1 span:nth-child(2) {
+    font-size: 5em;
+  }
+  .ppcpc-p4-text-1-p-1 span:nth-child(2) {
+    font-size: 3.8em;
+  }
+  .ppcpc-p4-text-3-p-1 span:nth-child(2) {
+    font-size: 4em;
+  }
 }
 
 /* ---------- 1250px ---------- */
@@ -2994,6 +3030,47 @@ footer span {
   /* ----- ABOUT ----- */
   .about-page .ap-content img {
     right: 0;
+  }
+}
+
+/* ---------- 1050px ---------- */
+
+@media screen and (max-width: 1050px) {
+  /* ----- PHOTOGRAPHIE ----- */
+  .ppcpc-p2-text-1-p-1 span:nth-child(1),
+  .ppcpc-p2-text-2-p-1 span:nth-child(1),
+  .ppcpc-p2-text-3-p-1 span:nth-child(1),
+  .ppcpc-p3-text-1-p-1 span:nth-child(1),
+  .ppcpc-p3-text-2-p-1 span:nth-child(1),
+  .ppcpc-p3-text-3-p-1 span:nth-child(1),
+  .ppcpc-p4-text-1-p-1 span:nth-child(1),
+  .ppcpc-p4-text-2-p-1 span:nth-child(1),
+  .ppcpc-p4-text-3-p-1 span:nth-child(1) {
+    font-size: 8em;
+  }
+  .ppcpc-p2-text-1-p-1 span:nth-child(2) {
+    font-size: 3.8em;
+  }
+  .ppcpc-p2-text-3-p-1 span:nth-child(2) {
+    font-size: 2.7em;
+  }
+  .ppcpc-p2-text-2-p-1 span:nth-child(2) {
+    font-size: 3.3em;
+  }
+  .ppcpc-p3-text-1-p-1 span:nth-child(2) {
+    font-size: 3.6em;
+  }
+  .ppcpc-p3-text-2-p-1 span:nth-child(2) {
+    font-size: 2.3em;
+  }
+  .ppcpc-p4-text-2-p-1 span:nth-child(2) {
+    font-size: 4.5em;
+  }
+  .ppcpc-p4-text-1-p-1 span:nth-child(2) {
+    font-size: 3.3em;
+  }
+  .ppcpc-p4-text-3-p-1 span:nth-child(2) {
+    font-size: 3.5em;
   }
 }
 
@@ -3083,6 +3160,42 @@ footer span {
   .ppcpc-d-1 {
     margin-top: 6vh;
     margin-bottom: 6vh;
+  }
+  /* ----- PHOTOGRAPHIE ----- */
+  .ppcpc-p2-text-1-p-1 span:nth-child(1),
+  .ppcpc-p2-text-2-p-1 span:nth-child(1),
+  .ppcpc-p2-text-3-p-1 span:nth-child(1),
+  .ppcpc-p3-text-1-p-1 span:nth-child(1),
+  .ppcpc-p3-text-2-p-1 span:nth-child(1),
+  .ppcpc-p3-text-3-p-1 span:nth-child(1),
+  .ppcpc-p4-text-1-p-1 span:nth-child(1),
+  .ppcpc-p4-text-2-p-1 span:nth-child(1),
+  .ppcpc-p4-text-3-p-1 span:nth-child(1) {
+    font-size: 6em;
+  }
+  .ppcpc-p2-text-1-p-1 span:nth-child(2) {
+    font-size: 3.3em;
+  }
+  .ppcpc-p2-text-3-p-1 span:nth-child(2) {
+    font-size: 2.2em;
+  }
+  .ppcpc-p2-text-2-p-1 span:nth-child(2) {
+    font-size: 2.8em;
+  }
+  .ppcpc-p3-text-1-p-1 span:nth-child(2) {
+    font-size: 3.1em;
+  }
+  .ppcpc-p3-text-2-p-1 span:nth-child(2) {
+    font-size: 1.8em;
+  }
+  .ppcpc-p4-text-2-p-1 span:nth-child(2) {
+    font-size: 4em;
+  }
+  .ppcpc-p4-text-1-p-1 span:nth-child(2) {
+    font-size: 2.8em;
+  }
+  .ppcpc-p4-text-3-p-1 span:nth-child(2) {
+    font-size: 3em;
   }
   /* ----- ABOUT ----- */
   .about-page .ap-content img {
@@ -3188,6 +3301,42 @@ footer span {
     justify-content: center;
     display: flex;
   }
+  /* ----- PHOTOGRAPHIE ----- */
+  .ppcpc-p2-text-1-p-1 span:nth-child(1),
+  .ppcpc-p2-text-2-p-1 span:nth-child(1),
+  .ppcpc-p2-text-3-p-1 span:nth-child(1),
+  .ppcpc-p3-text-1-p-1 span:nth-child(1),
+  .ppcpc-p3-text-2-p-1 span:nth-child(1),
+  .ppcpc-p3-text-3-p-1 span:nth-child(1),
+  .ppcpc-p4-text-1-p-1 span:nth-child(1),
+  .ppcpc-p4-text-2-p-1 span:nth-child(1),
+  .ppcpc-p4-text-3-p-1 span:nth-child(1) {
+    font-size: 4em;
+  }
+  .ppcpc-p2-text-1-p-1 span:nth-child(2) {
+    font-size: 2.8em;
+  }
+  .ppcpc-p2-text-3-p-1 span:nth-child(2) {
+    font-size: 1.7em;
+  }
+  .ppcpc-p2-text-2-p-1 span:nth-child(2) {
+    font-size: 2.3em;
+  }
+  .ppcpc-p3-text-1-p-1 span:nth-child(2) {
+    font-size: 2.6em;
+  }
+  .ppcpc-p3-text-2-p-1 span:nth-child(2) {
+    font-size: 1.3em;
+  }
+  .ppcpc-p4-text-2-p-1 span:nth-child(2) {
+    font-size: 3.5em;
+  }
+  .ppcpc-p4-text-1-p-1 span:nth-child(2) {
+    font-size: 2.3em;
+  }
+  .ppcpc-p4-text-3-p-1 span:nth-child(2) {
+    font-size: 2.5em;
+  }
 }
 
 /* ---------- 750px ---------- */
@@ -3251,6 +3400,42 @@ footer span {
   .ppcpc-d-1 {
     margin-top: 8vh;
     margin-bottom: 10vh;
+  }
+  /* ----- PHOTOGRAPHIE ----- */
+  .ppcpc-p2-text-1-p-1 span:nth-child(1),
+  .ppcpc-p2-text-2-p-1 span:nth-child(1),
+  .ppcpc-p2-text-3-p-1 span:nth-child(1),
+  .ppcpc-p3-text-1-p-1 span:nth-child(1),
+  .ppcpc-p3-text-2-p-1 span:nth-child(1),
+  .ppcpc-p3-text-3-p-1 span:nth-child(1),
+  .ppcpc-p4-text-1-p-1 span:nth-child(1),
+  .ppcpc-p4-text-2-p-1 span:nth-child(1),
+  .ppcpc-p4-text-3-p-1 span:nth-child(1) {
+    font-size: 3em;
+  }
+  .ppcpc-p2-text-1-p-1 span:nth-child(2) {
+    font-size: 2.3em;
+  }
+  .ppcpc-p2-text-3-p-1 span:nth-child(2) {
+    font-size: 1.2em;
+  }
+  .ppcpc-p2-text-2-p-1 span:nth-child(2) {
+    font-size: 1.8em;
+  }
+  .ppcpc-p3-text-1-p-1 span:nth-child(2) {
+    font-size: 2.1em;
+  }
+  .ppcpc-p3-text-2-p-1 span:nth-child(2) {
+    font-size: 0.8em;
+  }
+  .ppcpc-p4-text-2-p-1 span:nth-child(2) {
+    font-size: 3em;
+  }
+  .ppcpc-p4-text-1-p-1 span:nth-child(2) {
+    font-size: 1.8em;
+  }
+  .ppcpc-p4-text-3-p-1 span:nth-child(2) {
+    font-size: 2em;
   }
 }
 
@@ -3436,7 +3621,8 @@ footer span {
   .ppcpc-part-1-p-1 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    max-height: 60vh;
+    max-height: 80vh;
+    margin-bottom: 10vh;
   }
 
   .ppcpc-p1-image-p-1 {
