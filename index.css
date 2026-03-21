@@ -234,27 +234,35 @@ header {
 
 .pp-cards li:nth-child(1) {
   grid-area: c1;
+  display: block;
 }
 .pp-cards li:nth-child(2) {
   grid-area: c2;
+  display: block;
 }
 .pp-cards li:nth-child(3) {
   grid-area: c3;
+  display: block;
 }
 .pp-cards li:nth-child(4) {
   grid-area: c4;
+  display: block;
 }
 .pp-cards li:nth-child(5) {
   grid-area: c5;
+  display: block;
 }
 .pp-cards li:nth-child(6) {
   grid-area: c6;
+  display: block;
 }
 .pp-cards li:nth-child(7) {
   grid-area: c7;
+  display: block;
 }
 .pp-cards li:nth-child(8) {
   grid-area: c8;
+  display: block;
 }
 
 .portfolio-page .pp-cards ul,
@@ -1655,6 +1663,7 @@ li [class*="ppcf-f-text-"] span:nth-child(2) {
   top: 2%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .ppcpc-part-2-p-1,
@@ -1662,7 +1671,7 @@ li [class*="ppcf-f-text-"] span:nth-child(2) {
 .ppcpc-part-4-p-1,
 .ppcpc-p1-image-p-1,
 .ppcpc-p1-text-p-1 {
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -1777,6 +1786,10 @@ li [class*="ppcf-f-text-"] span:nth-child(2) {
 
 /* Part 2/3/4 */
 
+.ppcpc-part-2-p-1 {
+  /* aspect-ratio: 9/16; */
+}
+
 .ppcpc-part-2-p-1,
 .ppcpc-part-3-p-1,
 .ppcpc-part-4-p-1 {
@@ -1786,7 +1799,7 @@ li [class*="ppcf-f-text-"] span:nth-child(2) {
   gap: 20px;
   padding: 20px;
   width: 100%;
-  height: 86%;
+  height: auto;
 }
 
 [class*="ppcpc-p2-image-"] img,
@@ -2052,6 +2065,7 @@ li [class*="ppcf-f-text-"] span:nth-child(2) {
     "j3 t3";
   margin-bottom: 20vh;
   gap: 2%;
+  min-width: 90vw;
 }
 
 [class*="ppcpc-pr-jeu-"] {
@@ -2900,6 +2914,10 @@ footer span {
 /* ---------- 1400px ---------- */
 
 @media screen and (max-width: 1400px) {
+  /* ----- CARDS ----- */
+  .portfolio-page .pp-cards {
+    height: 80%;
+  }
   /* HEADER */
 
   [class*="ppcp-header-"] {
@@ -2909,6 +2927,15 @@ footer span {
   /* ----- C_3D ----- */
   .ppcpc-3-1 {
     margin-bottom: 4vh;
+  }
+}
+
+/* ---------- 1300px ---------- */
+
+@media screen and (max-width: 1300px) {
+  /* ----- CARDS ----- */
+  .portfolio-page .pp-cards {
+    height: 70%;
   }
 }
 
@@ -2934,6 +2961,21 @@ footer span {
 /* ---------- 1150px ---------- */
 
 @media screen and (max-width: 1150px) {
+  /* ----- CARDS ----- */
+  .portfolio-page .pp-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "c1 c2 c3"
+      "c5 c7 c8";
+  }
+  .pp-cards li:nth-child(4) {
+    display: none;
+  }
+
+  .pp-cards li:nth-child(6) {
+    display: none;
+  }
   /* ----- C_3D ----- */
   .ppcpc-3-1 {
     margin-bottom: 8vh;
@@ -2985,6 +3027,12 @@ footer span {
     margin-top: 6vh;
     margin-bottom: 4vh;
   }
+  /* ----- PROGRAMMATION ----- */
+
+  .ppcpc-pr-1 iframe {
+    width: 90%;
+  }
+
   /* ----- CONTACT ----- */
   .cpc-sa-send-button {
     width: 30%;
@@ -3048,6 +3096,10 @@ footer span {
 /* ---------- 850px ---------- */
 
 @media screen and (max-width: 850px) {
+  /* ----- CARDS ----- */
+  .portfolio-page .pp-cards {
+    height: 60%;
+  }
   /* ----- DESSIN ----- */
 
   .ppcpc-d-1 {
@@ -3112,11 +3164,46 @@ footer span {
     margin-top: 8vh;
     margin-bottom: 8vh;
   }
+
+  /* ----- PROGRAMMATION ----- */
+  .ppcpc-pr-1 {
+    grid-template-areas:
+      "t1"
+      "j1"
+      "t2"
+      "j2"
+      "t3"
+      "j3";
+    justify-content: center;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  [class*="ppcpc-pr-text-"],
+  [class*="ppcpc-pr-jeu-"] {
+    padding: 0;
+    width: 80vw;
+  }
+  [class*="ppcpc-pr-jeu-"] {
+    justify-content: center;
+    display: flex;
+  }
 }
 
 /* ---------- 750px ---------- */
 
 @media screen and (max-width: 750px) {
+  /* ----- CARDS ----- */
+  .portfolio-page .pp-cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "c1 c2"
+      "c3 c5"
+      "c7 c8";
+    height: 85%;
+  }
+
   /* ----- MORE ----- */
 
   .ppcpc-mo-1 h1 {
@@ -3315,6 +3402,10 @@ footer span {
 /* ---------- 500px ---------- */
 
 @media screen and (max-width: 500px) {
+  /* ----- CARDS ----- */
+  .portfolio-page .pp-cards li [class*="ppcf-f-text-"] span {
+    font-size: 0.9rem;
+  }
   /* ----- MORE ----- */
   .ppcpc-mo-1 h1 {
     font-size: 1rem;
@@ -3335,11 +3426,39 @@ footer span {
   [class*="ppcpc-r-content-"] {
     margin-top: 3vh;
   }
+
+  /* PHOTO  */
+
+  .ppcpc-p-1 {
+    justify-content: center;
+  }
+
+  .ppcpc-part-1-p-1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-height: 60vh;
+  }
+
+  .ppcpc-p1-image-p-1 {
+    padding-right: 10%;
+  }
+
+  .ppcp-footer-p {
+    bottom: -5%;
+  }
 }
 
 /* ---------- 450px ---------- */
 
 @media screen and (max-width: 450px) {
+  /* ----- CARDS ----- */
+  .portfolio-page .pp-cards {
+    height: 65%;
+  }
+
+  .portfolio-page .pp-cards li [class*="ppcf-f-text-"] span {
+    font-size: 0.7rem;
+  }
   /* ----- MORE ----- */
   .ppcpc-mo-1 h1 {
     font-size: 0.8rem;
@@ -3357,15 +3476,6 @@ footer span {
 /* ---------- 400px ---------- */
 
 @media screen and (max-width: 400px) {
-  .portfolio-page .pp-cards {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-      "c1 c2"
-      "c3 c5"
-      "c7 c8";
-  }
-
   /* ----- MORE ----- */
   .ppcpc-mo-1 h1 {
     font-size: 0.7rem;
@@ -3418,42 +3528,6 @@ footer span {
   }
 
   /* PROGRAMMATION */
-
-  .ppcpc-pr-1 {
-    grid-template-areas:
-      "t1"
-      "j1"
-      "t2"
-      "j2"
-      "t3"
-      "j3";
-    justify-content: center;
-  }
-
-  [class*="ppcpc-pr-jeu-"],
-  [class*="ppcpc-pr-text-"] {
-    padding: 0;
-    width: 100vw;
-  }
-
-  /* PHOTO  */
-
-  .ppcpc-p-1 {
-    justify-content: center;
-  }
-
-  .ppcpc-part-1-p-1 {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-
-  .ppcpc-p1-image-p-1 {
-    padding-right: 10%;
-  }
-
-  .ppcp-footer-p {
-    bottom: -5%;
-  }
 
   /* ABOUT */
 
