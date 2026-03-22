@@ -3639,7 +3639,7 @@ footer span {
 @media screen and (max-width: 450px) {
   /* ----- CARDS ----- */
   .portfolio-page .pp-cards {
-    height: 65%;
+    height: 80%;
   }
 
   .portfolio-page .pp-cards li [class*="ppcf-f-text-"] span {
