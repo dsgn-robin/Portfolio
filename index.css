@@ -3645,6 +3645,9 @@ footer span {
   .portfolio-page .pp-cards li [class*="ppcf-f-text-"] span {
     font-size: 0.7rem;
   }
+  .ppcpc-mo-1 ul li {
+    margin-bottom: 2%;
+  }
   /* ----- MORE ----- */
   .ppcpc-mo-1 h1 {
     font-size: 0.8rem;
