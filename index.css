@@ -3597,6 +3597,7 @@ footer span {
   }
   [class*="ppc-mo-z-container-"] {
     grid-template-columns: 1fr 1fr;
+    padding: 0;
   }
 
   /* HEADER */
@@ -3644,9 +3645,6 @@ footer span {
 
   .portfolio-page .pp-cards li [class*="ppcf-f-text-"] span {
     font-size: 0.7rem;
-  }
-  .ppcpc-mo-1 ul li {
-    margin-bottom: 2%;
   }
   /* ----- MORE ----- */
   .ppcpc-mo-1 h1 {

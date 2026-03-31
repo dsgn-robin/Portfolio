@@ -122,44 +122,6 @@ document.querySelectorAll(".carousel-stage").forEach((stage) => {
   });
 });
 
-// --- GESTION DU TACTILE (SWIPE) ---
-let touchStartX = 0;
-let touchEndX = 0;
-
-// On écoute le début du toucher
-stage.addEventListener(
-  "touchstart",
-  (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  },
-  { passive: true },
-);
-
-// On écoute la fin du toucher
-stage.addEventListener(
-  "touchend",
-  (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  },
-  { passive: true },
-);
-
-function handleSwipe() {
-  const swipeThreshold = 50; // Sensibilité : distance minimum en pixels pour valider le swipe
-  const diff = touchStartX - touchEndX;
-
-  if (Math.abs(diff) > swipeThreshold) {
-    if (diff > 0) {
-      // Balayage vers la gauche -> Diapo suivante
-      goNext();
-    } else {
-      // Balayage vers la droite -> Diapo précédente
-      goPrev();
-    }
-  }
-}
-
 window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowTop") {
     card.scrollBy(0, 150);
