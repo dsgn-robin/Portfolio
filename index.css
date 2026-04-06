@@ -260,9 +260,19 @@ header {
   grid-area: c7;
   display: block;
 }
-.pp-cards li:nth-child(8) {
+.portfolio-page .pp-cards li:last-child {
   grid-area: c8;
-  display: block;
+  display: flex;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  width: 31%;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-page .pp-cards ul li:nth-child(8):hover {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .portfolio-page .pp-cards ul,
@@ -909,16 +919,6 @@ li [class*="ppcf-f-text-"] span:nth-child(2) {
   display: contents;
 }
 
-.portfolio-page .pp-cards ul li:nth-child(8) {
-  background-color: transparent;
-  box-shadow: none;
-  border: none;
-}
-
-.portfolio-page .pp-cards ul li:nth-child(8):hover {
-  transform: translate(-50%, -50%) scale(1);
-}
-
 .ppcf-front-mo {
   display: flex;
   align-items: flex-start;
@@ -937,7 +937,7 @@ li [class*="ppcf-f-text-"] span:nth-child(2) {
 
 .portfolio-page .pp-cards li .ppcf-f-circle-mo {
   position: absolute;
-  width: 40%;
+  width: 91%;
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: rgba(255, 166, 0, 0.511);
