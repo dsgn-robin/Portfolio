@@ -77,10 +77,14 @@ window.addEventListener("DOMContentLoaded", () => {
   if (consent === "accepted") {
     enableAnalytics();
     enableMarketing();
+    banner.style.display = "none";
+    flou.style.display = "none";
   }
 
   if (consent === "rejected") {
     console.log("Mode sans cookies activé");
+    banner.style.display = "none";
+    flou.style.display = "none";
   }
 });
 // ----- FLÉCHES SYSTÈME -----
