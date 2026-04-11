@@ -6,7 +6,6 @@ const flou = document.querySelector(".ppc-active-back-portfolio");
 
 window.addEventListener("load", () => {
   const choice = localStorage.getItem("cookies-consent");
-  localStorage.removeItem("cookies-consent");
 
   if (!choice) {
     banner.style.display = "block";
