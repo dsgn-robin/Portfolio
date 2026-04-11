@@ -1,34 +1,87 @@
-
 const banner = document.getElementById("cookie-banner");
 const acceptBtn = document.getElementById("accept-cookies");
 const rejectBtn = document.getElementById("reject-cookies");
 const flou = document.querySelector(".ppc-active-back-portfolio");
 
-window.addEventListener("load", () => {
-  const choice = localStorage.getItem("cookies-consent");
+/* =========================
+   🔵 FONCTIONNALITÉS
+========================= */
 
-  if (!choice) {
+// 👉 Fonction analytics (Google Analytics par exemple)
+function enableAnalytics() {
+  const script = document.createElement("script");
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX";
+  script.async = true;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
+
+  gtag("js", new Date());
+  gtag("config", "G-XXXXXXX");
+}
+
+// 👉 Fonction marketing (ex: pixel Meta si un jour tu l’ajoutes)
+function enableMarketing() {
+  console.log("Marketing cookies activés");
+}
+
+// 👉 Fonction stockage préférences
+function saveConsent(value) {
+  localStorage.setItem("cookies-consent", value);
+  localStorage.setItem("cookies-date", new Date().toISOString());
+}
+
+/* =========================
+   🚀 ACCEPTATION
+========================= */
+
+acceptBtn.addEventListener("click", () => {
+  saveConsent("accepted");
+  banner.style.display = "none";
+  flou.style.display = "none";
+  
+
+  // 🟢 activation des fonctionnalités
+  enableAnalytics();
+  enableMarketing();
+});
+
+/* =========================
+   🚫 REFUS
+========================= */
+
+rejectBtn.addEventListener("click", () => {
+  saveConsent("rejected");
+  banner.style.display = "none";
+  flou.style.display = "none";
+
+  // 🔴 rien n’est activé
+  console.log("Cookies analytiques refusés");
+});
+
+/* =========================
+   🔄 AU CHARGEMENT
+========================= */
+
+window.addEventListener("DOMContentLoaded", () => {
+  const consent = localStorage.getItem("cookies-consent");
+
+  if (!consent) {
     banner.style.display = "block";
     flou.style.display = "block";
+    return;
   }
-});
 
-// Accepter
-acceptBtn.addEventListener("click", () => {
-  localStorage.setItem("cookies-consent", "accepted");
-  banner.style.display = "none";
-  flou.style.display = "none";
+  if (consent === "accepted") {
+    enableAnalytics();
+    enableMarketing();
+  }
 
-  // Ici tu peux activer Google Analytics etc.
-});
-
-// Refuser
-rejectBtn.addEventListener("click", () => {
-  localStorage.setItem("cookies-consent", "rejected");
-  banner.style.display = "none";
-  flou.style.display = "none";
-
-  // Ici tu dois NE PAS activer les scripts de tracking
+  if (consent === "rejected") {
+    console.log("Mode sans cookies activé");
+  }
 });
 // ----- FLÉCHES SYSTÈME -----
 
