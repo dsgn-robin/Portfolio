@@ -1,3 +1,36 @@
+
+const banner = document.getElementById("cookie-banner");
+const acceptBtn = document.getElementById("accept-cookies");
+const rejectBtn = document.getElementById("reject-cookies");
+const flou = document.querySelector(".ppc-active-back-portfolio");
+
+window.addEventListener("load", () => {
+  const choice = localStorage.getItem("cookies-consent");
+  localStorage.removeItem("cookies-consent");
+
+  if (!choice) {
+    banner.style.display = "block";
+    flou.style.display = "block";
+  }
+});
+
+// Accepter
+acceptBtn.addEventListener("click", () => {
+  localStorage.setItem("cookies-consent", "accepted");
+  banner.style.display = "none";
+  flou.style.display = "none";
+
+  // Ici tu peux activer Google Analytics etc.
+});
+
+// Refuser
+rejectBtn.addEventListener("click", () => {
+  localStorage.setItem("cookies-consent", "rejected");
+  banner.style.display = "none";
+  flou.style.display = "none";
+
+  // Ici tu dois NE PAS activer les scripts de tracking
+});
 // ----- FLÉCHES SYSTÈME -----
 
 const PortfolioPage = document.querySelector(".portfolio-page");
@@ -165,3 +198,6 @@ document
       sendBtn.disabled = false;
     }
   });
+
+
+
