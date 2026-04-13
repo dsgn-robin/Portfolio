@@ -3433,7 +3433,8 @@ footer span {
   .ppcpc-ep-1,
   .ppcpc-i-1,
   .ppcpc-pp-1,
-  .ppcpc-pmpo-1 {
+  .ppcpc-pmpo-1,
+  .ppcpc-mv-1 {
     grid-template-columns: 1fr;
     gap: 1%;
     grid-template-areas:
@@ -3677,7 +3678,8 @@ footer span {
   .ppcpc-ep-1,
   .ppcpc-i-1,
   .ppcpc-pp-1,
-  .ppcpc-pmpo-1 {
+  .ppcpc-pmpo-1,
+  .ppcpc-mv-1 {
     margin-bottom: 5vh;
   }
 
