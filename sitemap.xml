@@ -3,7 +3,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
   <url>
-    <loc>https://robincourte.com/index.html</loc>
+    <loc>https://robincourte.com/</loc>
     <priority>1.00</priority>
   </url>
   <url>
@@ -30,9 +30,11 @@
   <url><loc>https://robincourte.com/Projet/Essentialphone/Essentialphone.html</loc><priority>0.70</priority></url>
   <url><loc>https://robincourte.com/Projet/Photo/pphoto.html</loc><priority>0.70</priority></url>
   <url><loc>https://robincourte.com/Projet/Premier_portfolio/prem_portfolio.html</loc><priority>0.70</priority></url>
+  <url><loc>https://robincourte.com/Projet/Maquette_Vinted/M_Vinted.html</loc><priority>0.70</priority></url>
 
   <url><loc>https://robincourte.com/Domaine/Dessin/dessin.html</loc><priority>0.60</priority></url>
   <url><loc>https://robincourte.com/Domaine/Conception%203D/conception3d.html</loc><priority>0.60</priority></url>
+  <url><loc>https://robincourte.com/Domaine/Conception_objet/conception_objet.html</loc><priority>0.60</priority></url>
   <url><loc>https://robincourte.com/Domaine/Maquette/maquette.html</loc><priority>0.60</priority></url>
   <url><loc>https://robincourte.com/Domaine/Programmation/programmation.html</loc><priority>0.60</priority></url>
   <url><loc>https://robincourte.com/Domaine/Photographie/photographie.html</loc><priority>0.60</priority></url>
