@@ -573,7 +573,9 @@ li [class*="ppcf-f-text-"] span:nth-child(2) {
 .ppcpc-i-1,
 .ppcpc-ep-1,
 .ppcpc-pp-1,
-.ppcpc-pmpo-1 {
+.ppcpc-pmpo-1,
+.ppcpc-mv-1
+ {
   position: relative;
   width: 100%;
   margin-top: 2vh;
@@ -897,7 +899,8 @@ li [class*="ppcf-f-text-"] span:nth-child(2) {
 .ppcp-footer-mo,
 .ppcp-footer-ml,
 .ppcp-footer-am,
-.ppcp-footer-pmpo {
+.ppcp-footer-pmpo,
+.ppcp-footer-mv {
   bottom: 2%;
 }
 
@@ -1284,6 +1287,43 @@ li [class*="ppcf-f-text-"] span:nth-child(2) {
 .ppcpc-r-content-pmpo-1 img {
   width: 80%;
   aspect-ratio: 16/9;
+  border-radius: 20px;
+}
+
+/* ----- Maquette Vinted ----- */
+
+.ppc-maquette-vinted {
+  display: contents;
+}
+
+/* DOTS */
+
+.ppcf-f-dots-mv span:nth-child(1) {
+  background-color: #dcdcdc;
+}
+.ppcf-f-dots-mv span:nth-child(2) {
+  background-color: #007984;
+}
+.ppcf-f-dots-mv span:nth-child(3) {
+  background-color: #909090;
+}
+
+/* CONTENT */
+
+/* 1, 2, 3*/
+.ppcpc-p-1-img-mv-1 img, 
+.ppcpc-p-2-img-mv-1 img,
+.ppcpc-p-3-img-mv-1 img {
+  width: 70%;
+  aspect-ratio: 18/9;
+  border: 1px solid #909090;
+}
+
+/* RESULTAT */
+
+.ppcpc-r-content-mv-1 iframe {
+  width: 30%;
+  aspect-ratio: 8/12;
   border-radius: 20px;
 }
 
