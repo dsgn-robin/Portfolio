@@ -1157,13 +1157,13 @@ li [class*="ppcf-f-text-"] span:nth-child(2) {
 }
 
 .ppcf-f-dots-ep span:nth-child(1) {
-  background-color: #2e3f1c;
+  background-color: #0c7fe3;
 }
 .ppcf-f-dots-ep span:nth-child(2) {
-  background-color: #797979;
+  background-color: #f2da70;
 }
 .ppcf-f-dots-ep span:nth-child(3) {
-  background-color: #212121;
+  background-color: #7bba72;
 }
 
 /* CONTENT */
