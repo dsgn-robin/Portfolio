@@ -68,6 +68,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       href="https://robincourte.com/Projet/Essentialphone/Essentialphone.html"
     />
 
+    <!-- 3D VIEWER -->
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
     <!-- TITRE  -->
 
     <title>Essential Phone - Robin.C</title>
@@ -258,12 +262,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span>RÉSULTAT FINAL</span>
             </div>
             <div class="ppcpc-r-line-ep-1"></div>
-            <div class="ppcpc-r-content-ep-1">
-              <img
+            <div class="ppcpc-r-content-ep-1" id="conteneur-3d">
+              <div class="crop-container">
+  <!-- Modèle 3D -->
+  <model-viewer 
+    id="mon-modele-variable"
+    src="../../11-Essential_phone/Phone_orange.glb" 
+    alt="Description de ton modèle 3D" 
+    auto-rotate 
+    camera-controls
+    auto-rotate-delay="1000"
+    disable-tap
+    interaction-prompt="none"
+    max-camera-orbit="auto auto 500%"
+    field-of-view="10deg">
+  </model-viewer>
+
+  <!-- Overlay regroupant tous les boutons par-dessus la 3D -->
+  
+</div>
+<div class="controls-overlay" id="conteneur-buttons">
+
+    <div class="action-1">
+      <button id="btn-toggle-rotate">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16">
+  <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5"/>
+</svg>
+      </button>
+    </div>
+
+    <div class="selecteur-modeles">
+      <button onclick="changerModele('../../11-Essential_phone/Phone_orange.glb')">Orange</button>
+      <button onclick="changerModele('../../11-Essential_phone/Phone_bleu.glb')">Bleu</button>
+      <button onclick="changerModele('../../11-Essential_phone/Phone_vert.glb')">Vert</button>
+      <button onclick="changerModele('../../11-Essential_phone/Phone_jaune.glb')">Jaune</button>
+      <button onclick="changerModele('../../11-Essential_phone/Phone_all.glb')">Tous</button>
+    </div>
+
+    <div class="action-2">
+      
+      <button id="btn-fullscreen"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707"/>
+</svg></button>
+    </div>
+  </div>
+              <!-- <div class="crop-container" id="conteneur-3d">
+                <model-viewer 
+             id="mon-modele-variable"
+  src="../../11-Essential_phone/Phone_orange.glb" 
+  alt="Description de ton modèle 3D" 
+  auto-rotate 
+  camera-controls
+  auto-rotate-delay="1000"
+  disable-tap
+  interaction-prompt="none"
+  max-camera-orbit="auto auto 500%"
+  field-of-view="10deg"
+  >
+</model-viewer>
+              </div>
+             
+<div class="selecteur-modeles">
+  <button onclick="changerModele('../../11-Essential_phone/Phone_orange.glb')">Orange</button>
+  <button onclick="changerModele('../../11-Essential_phone/Phone_bleu.glb')">Bleu</button>
+  <button onclick="changerModele('../../11-Essential_phone/Phone_vert.glb')">Vert</button>
+  <button onclick="changerModele('../../11-Essential_phone/Phone_jaune.glb')">Jaune</button>
+  <button onclick="changerModele('../../11-Essential_phone/Phone_all.glb')">Tous</button>
+</div>
+<button id="btn-toggle-rotate">Mettre en pause</button>
+<button id="btn-fullscreen">Plein écran</button> -->
+              <!-- <img
                 src="../../11-Essential_phone/Phone_all.webp"
                 alt="Image 3D du téléphone"
                 class="reveal"
-              />
+              /> -->
             </div>
           </div>
           <div class="ppcpc-appris-ep-1">
